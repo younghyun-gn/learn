@@ -1,4 +1,4 @@
-package database.domain;
+package spring.learn.domain;
 
 import java.util.Objects;
 import java.util.UUID;
