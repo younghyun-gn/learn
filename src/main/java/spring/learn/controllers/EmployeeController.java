@@ -35,10 +35,11 @@ public class EmployeeController {
     }
 
     // Single item
-
+    // returning an @Entity marked class type will automatically convert it to JSON
     @GetMapping("/employees/{id}")
     Employee one(@PathVariable UUID id) {
 
+        // gotta handle every possible error with orElseThrow ig
         return repository.findById(id)
                 .orElseThrow(() -> new EmployeeNotFoundException(id));
     }
